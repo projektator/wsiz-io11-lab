@@ -104,3 +104,8 @@ Największa z podanych liczb to: 89.1
 
 Napisz metodę wyznaczającą średnią arytmetyczną w tablicy liczb rzeczywistych.
 
+#### 2.1
+
+Utwórz klasę `Program` zawierającą metodę `main`.
+
+Utwórz klasę `Employee` z polami składowymi: `firstname`, `lastname` oraz `age`.
