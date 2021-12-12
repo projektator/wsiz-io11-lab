@@ -3,8 +3,10 @@ package pl.edu.wsiz.io11.part2;
 public class Program {
     public static void main(String[] args) {
 
-        Employee employee2 = new Employee("Jan", "Kowalski", (byte) 31);
+        Company company = new Company();
 
-        employee2.print();
+        Employee employee1 = new Employee("Jan1", "Kowalski1", (byte) 31);
+        company.add(employee1);
+        company.add(new Employee("Jan2", "Kowalski2", (byte) 31));
     }
 }
