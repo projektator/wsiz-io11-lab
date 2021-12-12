@@ -109,3 +109,16 @@ Napisz metodę wyznaczającą średnią arytmetyczną w tablicy liczb rzeczywist
 Utwórz klasę `Program` zawierającą metodę `main`.
 
 Utwórz klasę `Employee` z polami składowymi: `firstname`, `lastname` oraz `age`.
+
+
+#### 2.2
+
+Do klasy `Employee` dodaj metodę `print` wypisującą na ekranie pracownika wg szablonu:
+
+`Jan Kowalski 31`
+
+Jakiego typu powinna to być metoda: instancyjna czy statyczna?
+
+Zweryfikuj poprawność działania metody: w metodzie `main` stwórz obiekt klasy `Employee`,
+ustaw wartości pól, a następnie wypisz przy pomocy nowo powstałej metody jego zawartość.
+
