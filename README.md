@@ -7,7 +7,6 @@ Do wypisania tekstu użyj metody: `print` lub `println` strumienia wyjściowego 
 #### 1.2
 
 Wypisz do konsoli ‘choinkę’ jak poniżej:
-
 ```
      *
     ***
@@ -25,9 +24,7 @@ Poproś użytkownika o wpisanie tekstu, następnie wypisz go w kolejnej linii:
 Wpisz tekst: Witaj!
 Wpisany tekst to: Witaj!
 ```
-
-Do zaczytania tekstu użyj metody `next` klasy `Scanner`. Do konstruktora klasy `Scanner` przekaż domyślny strumień
-wejściowy: `System.in`
+Do zaczytania tekstu użyj metody `next` klasy `Scanner`. Do konstruktora klasy `Scanner` przekaż domyślny strumień wejściowy: `System.in`
 
 #### 1.4
 
@@ -53,7 +50,6 @@ Podaj dzielnik: 8
 
 88 dzieli się przez 8
 ```
-
 ```
 Podaj dzielną: 88
 Podaj dzielnik: 9
@@ -72,8 +68,8 @@ Obwód: 65.97
 Pole: 346.36
 ```
 
-Dla zwiększenia dokładności obliczeń możesz wykorzystać stałą: `Math.PI`. Do wczytania liczby rzeczywistej użyj
-metody `nextDouble` klasy `Scanner`
+Dla zwiększenia dokładności obliczeń możesz wykorzystać stałą: `Math.PI`.
+Do wczytania liczby rzeczywistej użyj metody `nextDouble` klasy `Scanner`
 W celu ustalenia długości części dziesiętnej przy konwersji do łańcucha znaków użyj metody `printf`:
 
 `System.out.printf("Pole: %.2f", area)`
@@ -114,6 +110,7 @@ Utwórz klasę `Program` zawierającą metodę `main`.
 
 Utwórz klasę `Employee` z polami składowymi: `firstname`, `lastname` oraz `age`.
 
+
 #### 2.2
 
 Do klasy `Employee` dodaj metodę `print` wypisującą na ekranie pracownika wg szablonu:
@@ -122,8 +119,8 @@ Do klasy `Employee` dodaj metodę `print` wypisującą na ekranie pracownika wg 
 
 Jakiego typu powinna to być metoda: instancyjna czy statyczna?
 
-Zweryfikuj poprawność działania metody: w metodzie `main` stwórz obiekt klasy `Employee`, ustaw wartości pól, a
-następnie wypisz przy pomocy nowo powstałej metody jego zawartość.
+Zweryfikuj poprawność działania metody: w metodzie `main` stwórz obiekt klasy `Employee`,
+ustaw wartości pól, a następnie wypisz przy pomocy nowo powstałej metody jego zawartość.
 
 #### 2.3
 
@@ -143,203 +140,6 @@ Zweryfikuj działanie metody wykorzystując wcześniej utworzoną metodę `print
 
 Wszystkie pola klasy `Employee` oznacz jako prywatne (`private`).
 
-W głównym programie, bez wykorzystania metody `read`, utwórz obiekt klasy `Employee` oraz zainicjalizuj jego pola
-wartościami: `Jan` `Kowalski` `31`.
+W głównym programie, bez wykorzystania metody `read`, utwórz obiekt klasy `Employee` oraz zainicjalizuj jego pola wartościami: `Jan` `Kowalski` `31`.
 
 Wprowadź niezbędne modyfikacje umożliwiające wykonanie powyższego zadania.
-
-#### 2.5
-
-Utwórz klasę `Company` posiadającą prywatne pole `employees` typu `ArrayList<Employee>`.
-
-Do klasy `Company` dodaj metodę `add` przyjmującą jako argument obiekt klasy `Employee` i dodającą go do listy
-pracowników (`employees`).
-
-Kiedy należy zainicjalizować pole `employees`?
-
-Jakiego typu powinna być metoda `add`: instancyjna czy statyczna?
-
-W części głównej programu utwórz instancję klasy `Company` oraz dodaj do niej pracownika przy pomocy metody `add`.
-
-#### 2.6
-
-Do klasy `Company` dodaj bezargumentową metodę `printEmployees` wypisującą listę wszystkich pracowników w formacie:
-
-```
---------------------
-1  Jan Kowalski 31
-2  Anna Kowalczyk 27
-3  Piotr Nowak 36
---------------------
-```
-
-Jakiego typu powinna to być metoda: statyczna czy instancyjna?
-
-W głównej części programu przetestuj działanie metody `printEmployees` wykorzystując listę przedstawioną powyżej.
-
-#### 2.7
-
-Rozszerz metodę `add` klasy `Company` o sprawdzenie czy pracownik o takim imieniu, nazwisku i wieku znajduje się już na
-liście. W tym celu klasę `Employee` rozszerz o metodę `isEqual` przyjmującą jako argument inny obiekt klasy `Employee` i
-zwracającą informację czy obiekty posiadają takie same pola (`boolean`).
-
-Jeśli taki sam pracownik znajduje się już na liście powininen zostać wypisany odpowiedni komunikat a pracownik nie
-powinien zostać ponownie dodany.
-
-`Pracownik o tych samych danych znajduje się już na liście!`
-
-#### 2.8
-
-Do klasy `Company` dodaj bezargumentową metodę `add`, która samodzielnie zaczyta a następnie doda do listy pracownika.
-
-Metoda powinna również niepozwalać na ponowne dodanie takiego samego pracownika.
-
-Jakiego typu powinna to być metoda: statyczna czy instancyjna?
-
-#### 2.9
-
-Do klasy `Company` dodaj metodę `removeEmployee` usuwającą pracownika z listy. Jako argument metoda powinna przyjmować
-numer porządkowy widoczny przed każdą osobą na liście wszystkich pracowników.
-
-Jeśli wprowadzony został niepoprawny numer aplikacja powinna wyświetlić stosowny komunikat:
-
-`Lista nie zawiera pracownika o podanym numerze porządkowym.`
-
-#### 2.10
-
-W głównej części programu utwórz następujące menu:
-
-```
-Lista operacji:
-
-1 - wypisz listę pracowników
-2 - dodaj pracownika
-3 - usuń pracownika
-9 - zakończ program
-
-Podaj numer operacji:
-``` 
-
-Każda z operacji powinna zostać odpowiednio obsłużona i mieć odzwierciedlenie w stanie wcześniej utworzonego obiektu
-klasy `Company`.
-
-Po wybraniu operacji nr 3 program powinien poprosić o numer pracownika:
-
-`Podaj numer pracownika do usunięcia:`
-
-W przypadku podania niepoprawnego numeru powinien zostać wyświetlony odpowiedni komunikat:
-
-`Operacja o podanym numerze nie istnieje!`
-
-Menu powinno być wyświetlane ponownie po wykonaniu jakiejkolwiek operacji innej niż zakończenie programu, również w
-przypadku wprowadzenia nieprawidłowego numeru operacji.
-
-#### 2.11
-
-Zdefiniuj nowy typ wyliczeniowy `Sex` (płeć) mogący przyjmować jedną z dwóch wartości: `FEMALE` (żeńska) oraz `MALE` (
-męska). Do klasy `Employee` dodaj nowe pole `sex` typu `Sex`. Metodę `read` klasy `Employee` poszerz o zaczytanie płci
-pracownika w postaci:
-
-```
-Podaj płeć:      K
-```
-
-Aplikacja powinna zaczytać płeć jako `String`, jeśli pierwszym znakiem jest `K` lub `k` powinna ustawić płeć na `FEMALE`
-w przeciwnym wypadku `MALE`. Metoda `print` klasy `Employee` powinna zostać rozszerzona o wypisanie płci przy użyciu
-liter `K` / `M`, jak poniżej:
-
-```
-Anna Kowalczyk 27 K
-Jan Kowalski 31 M
-```
-
-Dokonaj pozostałych zmian niezbędnych do zrealizowania powyższych wymagań.
-
-#### 2.12
-
-Rozszerz klasę `Employee` o dodatkowe pole `salary` typu `int`. Zaktualizuj metody `read` i `print` klasy `Employee`
-oraz inne niezbędne miejsca w aplikacji.
-
-```
-Podaj zarobki:   3000
-```
-
-```
-Anna Kowalczyk 27 K 3000zł
-Jan Kowalski 31 M 2800zł
-```
-
-#### 2.13
-
-Rozszerz klasę `Employee` o dodatkowe pole `skills` typu `String[]`. Zaktualizuj metodę `read` i `print`
-klasy `Employee` oraz inne niezbędne miejsca w aplikacji.
-
-```
-Podaj umiejętności: Java, SQL,     HTML,CSS   
-```
-
-```
-Anna Kowalczyk 27 K 3000zł [Java, SQL, HTML, CSS]
-Jan Kowalski 31 M 2800zł [C#, JS]
-```
-
-W celu zaczytania całej linii wykorzystaj metodę `nextLine` klasy `Scanner`. Aby podzielić ciąg znaków na fragmenty (
-tablicę łańcuchów) wykorzystaj metodę `split` klasy `String`. Odwrotną operację można przeprowadzić za pomocą statycznej
-metody `join` klasy `String`. Metoda `trim` pozwala na usunięcie spacji z początku i końca łańcucha znaków.
-
-#### 2.14
-
-Klasę `Employee` oznacz jako abstrakcyjną `abstract`.
-
-Utwórz dwie nowe klasy rozszerzające klasę `Employee`: `Developer` i `Manager`.
-
-Przekształć menu programu do postaci:
-
-```
-Lista operacji:
-
-1 - wypisz listę pracowników
-2 - dodaj programistę
-3 - dodaj kierownika
-4 - usuń pracownika
-9 - zakończ program
-
-Podaj numer operacji:
-``` 
-
-#### 2.15
-
-Zaktualizuj metodę wypisującą pracownika (`print`) o przedrostek `P` dla programisty (`Developer`) oraz
-`K` dla kierownika (`Manager`)
-
-```
-K Anna Kowalczyk 27 K 3000zł [Scrum]
-P Jan Kowalski 31 M 2800zł [C#, JS]
-```
-
-#### 2.16
-
-Rozszerz klasę `Manager` o dodatkowe pole `teamSize` typu `int`.
-Zaktualizuj metodę `read` i `print` klasy `Manager` oraz inne niezbędne miejsca w aplikacji.
-
-```
-Podaj rozm. zespołu: 5
-```
-
-```
-K Anna Kowalczyk 27 K 3000zł [Scrum] 5
-P Jan Kowalski 31 M 2800zł [C#, JS]
-```
-
-#### 2.17
-
-Do klasy `Employee` dodaj abstrakcyjną metodę `getTotalSalary` zwracającą całkowite wynagrodzenie pracownika (`double`).
-Zaimplementuj metodę `getTotalSalary` w klasach `Developer` i `Manager` zgodnie z poniższymi wymaganiami:
-
-- całkowite wynagrodzenie programisty powinno uwzględniać bonus za znajomość technologi - 2% (kwoty podstawowej) za
-  każdą technologię
-
-- całkowite wynagrodzenie kierownika powinno zawierać bonus za wielkość zespołu którym kieruje - 5% (kwoty podstawowej)
-  za każde 5 osób w zespole.
-
-Zaktualizuj metodę `print` aby wypisywała całkowite wynagrodzenie zamiast podstawowego.
