@@ -14,6 +14,10 @@ public class Company {
         employeesArrayList.add(employee);
     }
 
+    public void add() {
+        add(Employee.read());
+    }
+
     private boolean isAlreadyOnTheList(Employee employee) {
         for (Employee tmpEmployee : employeesArrayList) {
             if (tmpEmployee.isEqual(employee)) {

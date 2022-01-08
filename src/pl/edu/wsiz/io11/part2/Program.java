@@ -14,6 +14,8 @@ public class Program {
         company.add(e1);
         company.add(e2);
 
+        company.add();
+
         company.printEmployees();
     }
 }
