@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Company {
     private ArrayList<Employee> employeesArrayList = new ArrayList<>();
 
-    public void add(Employee employee) {
+    public void addEmployee(Employee employee) {
         if (isAlreadyOnTheList(employee)) {
             System.out.println("Pracownik o tych samych danych znajduje się już na liście!");
             return;
@@ -14,8 +14,16 @@ public class Company {
         employeesArrayList.add(employee);
     }
 
-    public void add() {
-        add(Employee.read());
+    public void addEmployee() {
+        addEmployee(Employee.read());
+    }
+
+    public void removeEmployee(int number) {
+        if (number < 1 || number > employeesArrayList.size()) {
+            System.out.println("Lista nie zawiera pracownika o podanym numerze porządkowym.");
+            return;
+        }
+        employeesArrayList.remove(number - 1);
     }
 
     private boolean isAlreadyOnTheList(Employee employee) {
