@@ -184,3 +184,12 @@ informację czy obiekty posiadają takie same pola (`boolean`).
 Jeśli taki sam pracownik znajduje się już na liście powininen zostać wypisany odpowiedni komunikat a pracownik nie powinien zostać ponownie dodany.
 
 `Pracownik o tych samych danych znajduje się już na liście!`
+
+
+#### 2.8
+
+Do klasy `Company` dodaj bezargumentową metodę `add`, która samodzielnie zaczyta a następnie doda do listy pracownika.
+
+Metoda powinna również niepozwalać na ponowne dodanie takiego samego pracownika.
+
+Jakiego typu powinna to być metoda: statyczna czy instancyjna?
