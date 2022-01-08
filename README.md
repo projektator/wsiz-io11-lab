@@ -164,11 +164,11 @@ W części głównej programu utwórz instancję klasy `Company` oraz dodaj do n
 Do klasy `Company` dodaj bezargumentową metodę `printEmployees` wypisującą listę wszystkich pracowników w formacie:
 
 ```
-------------------
+--------------------
 1  Jan Kowalski 31
 2  Anna Kowalczyk 27
 3  Piotr Nowak 36
-------------------
+--------------------
 ```
 
 Jakiego typu powinna to być metoda: statyczna czy instancyjna?

@@ -8,4 +8,26 @@ public class Company {
     public void add(Employee employee) {
         employeesArrayList.add(employee);
     }
+
+    public void printEmployees() {
+        System.out.println("--------------------");
+
+        int number = 1;
+        for (Employee employee : employeesArrayList) {
+            System.out.print(number++ + "  ");
+            employee.print();
+        }
+
+//        for (Employee employee : employeesArrayList) {
+//            System.out.print(employeesArrayList.indexOf(employee) + 1 + "  ");
+//            employee.print();
+//        }
+
+//        for (int i = 0; i < employeesArrayList.size(); i++) {
+//            System.out.print(i + 1 + "  ");
+//            employeesArrayList.get(i).print();
+//        }
+
+        System.out.println("--------------------");
+    }
 }
