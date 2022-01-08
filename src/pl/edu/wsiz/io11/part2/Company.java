@@ -6,6 +6,13 @@ public class Company {
     private ArrayList<Employee> employeesArrayList = new ArrayList<>();
 
     public void add(Employee employee) {
+        for (Employee tmpEmployee : employeesArrayList) {
+            if (tmpEmployee.isEqual(employee)) {
+                System.out.println("Pracownik o tych samych danych znajduje się już na liście!");
+                return;
+            }
+        }
+
         employeesArrayList.add(employee);
     }
 

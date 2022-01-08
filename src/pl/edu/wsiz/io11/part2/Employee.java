@@ -7,21 +7,27 @@ public class Employee {
     private String lastname;
     private byte age;
 
-    Employee(String firstname, String lastname, byte age) {
+    public Employee(String firstname, String lastname, byte age) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.age = age;
     }
 
-    void print() {
+    public boolean isEqual(Employee employee) {
+        return firstname.equalsIgnoreCase(employee.firstname) &&
+                lastname.equalsIgnoreCase(employee.lastname) &&
+                age == employee.age;
+    }
+
+    public void print() {
         System.out.println(firstname + " " + lastname + " " + age);
     }
 
-    static void print(Employee employee) {
+    public static void print(Employee employee) {
         employee.print();
     }
 
-    static Employee read() {
+    public static Employee read() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Podaj imię:      ");
@@ -35,5 +41,4 @@ public class Employee {
 
         return new Employee(firstname, lastname, age);
     }
-
 }
