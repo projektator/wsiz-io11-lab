@@ -202,3 +202,33 @@ widoczny przed każdą osobą na liście wszystkich pracowników.
 Jeśli wprowadzony został niepoprawny numer aplikacja powinna wyświetlić stosowny komunikat:
 
 `Lista nie zawiera pracownika o podanym numerze porządkowym.`
+
+
+#### 2.10
+
+W głównej części programu utwórz następujące menu:
+
+```
+Lista operacji:
+
+1 - wypisz listę pracowników
+2 - dodaj pracownika
+3 - usuń pracownika
+9 - zakończ program
+
+Podaj numer operacji:
+``` 
+
+Każda z operacji powinna zostać odpowiednio obsłużona i mieć odzwierciedlenie w stanie
+wcześniej utworzonego obiektu klasy `Company`.
+
+Po wybraniu operacji nr 3 program powinien poprosić o numer pracownika:
+
+`Podaj numer pracownika do usunięcia:`
+
+W przypadku podania niepoprawnego numeru powinien zostać wyświetlony odpowiedni komunikat:
+
+`Operacja o podanym numerze nie istnieje!`
+
+Menu powinno być wyświetlane ponownie po wykonaniu jakiejkolwiek operacji innej niż zakończenie programu,
+również w przypadku wprowadzenia nieprawidłowego numeru operacji.
