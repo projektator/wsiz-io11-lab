@@ -1,33 +1,40 @@
 package pl.edu.wsiz.io11.part2;
 
+import java.util.Scanner;
+
 public class Program {
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
         Company company = new Company();
 
         company.addEmployee(new Employee("Jan", "Kowalski", (byte) 31));
         company.addEmployee(new Employee("Anna", "Kowalczyk", (byte) 27));
         company.addEmployee(new Employee("Piotr", "Nowak", (byte) 36));
 
-//        Employee e1 = new Employee("piotr", "nowak", (byte) 36);
-//        Employee e2 = new Employee("Piotr", "NowaK", (byte) 36);
-//
-//        company.addEmployee(e1);
-//        company.addEmployee(e2);
-//
-//        company.addEmployee();
+        while (true) {
+            System.out.println("Lista operacji:\n");
+            System.out.println("1 - wypisz listę pracowników");
+            System.out.println("2 - dodaj pracownika");
+            System.out.println("3 - usuń pracownika");
+            System.out.println("9 - zakończ program\n");
 
-        company.printEmployees();
+            System.out.print("Podaj numer operacji: ");
+            int operationNumber = scanner.nextInt();
 
-        company.removeEmployee(0);
-
-        company.printEmployees();
-
-        company.removeEmployee(3);
-
-        company.printEmployees();
-
-        company.removeEmployee(3);
-
-        company.printEmployees();
+            if (operationNumber == 1) {
+                company.printEmployees();
+            } else if (operationNumber == 2) {
+                company.addEmployee();
+            } else if (operationNumber == 3) {
+                System.out.print("Podaj numer pracownika do usunięcia: ");
+                int employeeNumber = scanner.nextInt();
+                company.removeEmployee(employeeNumber);
+            } else if (operationNumber == 9) {
+                break;
+            } else {
+                System.out.println("Operacja o podanym numerze nie istnieje!");
+            }
+        }
     }
 }
