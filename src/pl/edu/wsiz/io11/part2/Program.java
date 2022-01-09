@@ -12,7 +12,8 @@ public class Program {
         company.addEmployee(new Employee("Anna", "Kowalczyk", (byte) 27));
         company.addEmployee(new Employee("Piotr", "Nowak", (byte) 36));
 
-        while (true) {
+        int operationNumber;
+        do {
             System.out.println("Lista operacji:\n");
             System.out.println("1 - wypisz listę pracowników");
             System.out.println("2 - dodaj pracownika");
@@ -20,21 +21,27 @@ public class Program {
             System.out.println("9 - zakończ program\n");
 
             System.out.print("Podaj numer operacji: ");
-            int operationNumber = scanner.nextInt();
+            operationNumber = scanner.nextInt();
 
-            if (operationNumber == 1) {
-                company.printEmployees();
-            } else if (operationNumber == 2) {
-                company.addEmployee();
-            } else if (operationNumber == 3) {
-                System.out.print("Podaj numer pracownika do usunięcia: ");
-                int employeeNumber = scanner.nextInt();
-                company.removeEmployee(employeeNumber);
-            } else if (operationNumber == 9) {
-                break;
-            } else {
-                System.out.println("Operacja o podanym numerze nie istnieje!");
+            switch (operationNumber) {
+                case 1:
+                    company.printEmployees();
+                    break;
+                case 2:
+                    company.addEmployee();
+                    break;
+                case 3:
+                    System.out.print("Podaj numer pracownika do usunięcia: ");
+                    int employeeNumber = scanner.nextInt();
+                    company.removeEmployee(employeeNumber);
+                    break;
+                case 9:
+                    // nic nie rób (zakończ pętlę)
+                    break;
+                default:
+                    System.out.println("Operacja o podanym numerze nie istnieje!");
             }
-        }
+
+        } while (operationNumber != 9);
     }
 }
