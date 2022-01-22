@@ -14,8 +14,12 @@ public class Company {
         employeesArrayList.add(employee);
     }
 
-    public void addEmployee() {
-        addEmployee(Employee.read());
+    public void addDeveloper() {
+        addEmployee(Developer.read());
+    }
+
+    public void addManager() {
+        addEmployee(Manager.read());
     }
 
     public void removeEmployee(int number) {
