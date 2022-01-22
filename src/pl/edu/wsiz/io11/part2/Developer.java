@@ -9,34 +9,6 @@ public class Developer extends Employee {
     }
 
     public static Developer read() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Podaj imię:      ");
-        String firstname = scanner.next();
-
-        System.out.print("Podaj nazwisko:  ");
-        String lastname = scanner.next();
-
-        System.out.print("Podaj wiek:      ");
-        byte age = scanner.nextByte();
-
-        System.out.print("Podaj płeć:      ");
-        String sexStr = scanner.next();
-        Sex sex = sexStr.toUpperCase().charAt(0) == 'K' ? Sex.FEMALE : Sex.MALE;
-
-        System.out.print("Podaj zarobki:   ");
-        int salary = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.print("Podaj umiejętności: ");
-        String skillsStr = scanner.nextLine();
-
-        String[] skillsArr = skillsStr.split(",");
-
-        for (int i = 0; i < skillsArr.length; i++) {
-            skillsArr[i] = skillsArr[i].trim();
-        }
-
-        return new Developer(firstname, lastname, age, sex, salary, skillsArr);
+        return new Developer(readFirstname(), readLastname(), readAge(), readSex(), readSalary(), readSkills());
     }
 }

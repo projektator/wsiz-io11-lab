@@ -1,5 +1,7 @@
 package pl.edu.wsiz.io11.part2;
 
+import java.util.Scanner;
+
 public abstract class Employee {
     private String firstname;
     private String lastname;
@@ -34,5 +36,61 @@ public abstract class Employee {
         employee.print();
     }
 
+    protected static String readFirstname() {
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Podaj imię:      ");
+
+        return scanner.next();
+    }
+
+    protected static String readLastname() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj nazwisko:  ");
+
+        return scanner.next();
+    }
+
+    protected static byte readAge() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj wiek:      ");
+
+        return scanner.nextByte();
+    }
+
+    protected static Sex readSex() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj płeć:      ");
+        String sexStr = scanner.next();
+
+        return sexStr.toUpperCase().charAt(0) == 'K' ? Sex.FEMALE : Sex.MALE;
+    }
+
+    protected static int readSalary() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj zarobki:   ");
+        int salary = scanner.nextInt();
+        scanner.nextLine();
+
+        return salary;
+    }
+
+    protected static String[] readSkills() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj umiejętności: ");
+        String skillsStr = scanner.nextLine();
+
+        String[] skillsArr = skillsStr.split(",");
+
+        for (int i = 0; i < skillsArr.length; i++) {
+            skillsArr[i] = skillsArr[i].trim();
+        }
+
+        return skillsArr;
+    }
 }
