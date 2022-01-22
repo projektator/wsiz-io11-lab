@@ -1,5 +1,6 @@
 package pl.edu.wsiz.io11.part2;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Employee {
@@ -8,13 +9,15 @@ public class Employee {
     private byte age;
     private Sex sex;
     private int salary;
+    private String[] skills;
 
-    public Employee(String firstname, String lastname, byte age, Sex sex, int salary) {
+    public Employee(String firstname, String lastname, byte age, Sex sex, int salary, String[] skills) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.age = age;
         this.sex = sex;
         this.salary = salary;
+        this.skills = skills;
     }
 
     public boolean isEqual(Employee employee) {
@@ -25,7 +28,8 @@ public class Employee {
 
     public void print() {
         char sexChar = this.sex == Sex.FEMALE ? 'K' : 'M';
-        System.out.printf("%s %s %d %s %dzł\n", firstname, lastname, age, sexChar, salary);
+        String skillsStr = String.join(", ", skills);
+        System.out.printf("%s %s %d %s %dzł [%s]\n", firstname, lastname, age, sexChar, salary, skillsStr);
 //        System.out.println(firstname + " " + lastname + " " + age + " " + sexChar + " " + salary + "zł");
     }
 
@@ -51,7 +55,17 @@ public class Employee {
 
         System.out.print("Podaj zarobki:   ");
         int salary = scanner.nextInt();
+        scanner.nextLine();
 
-        return new Employee(firstname, lastname, age, sex, salary);
+        System.out.print("Podaj umiejętności: ");
+        String skillsStr = scanner.nextLine();
+
+        String[] skillsArr = skillsStr.split(",");
+
+        for (int i = 0; i < skillsArr.length; i++) {
+            skillsArr[i] = skillsArr[i].trim();
+        }
+
+        return new Employee(firstname, lastname, age, sex, salary, skillsArr);
     }
 }

@@ -8,9 +8,9 @@ public class Program {
         Scanner scanner = new Scanner(System.in);
         Company company = new Company();
 
-        company.addEmployee(new Employee("Jan", "Kowalski", (byte) 31, Sex.MALE, 3000));
-        company.addEmployee(new Employee("Anna", "Kowalczyk", (byte) 27, Sex.FEMALE, 3200));
-        company.addEmployee(new Employee("Piotr", "Nowak", (byte) 36, Sex.MALE, 2800));
+        company.addEmployee(new Employee("Jan", "Kowalski", (byte) 31, Sex.MALE, 3000, new String[]{"HTML"}));
+        company.addEmployee(new Employee("Anna", "Kowalczyk", (byte) 27, Sex.FEMALE, 3200, new String[]{"Java", "CSS"}));
+        company.addEmployee(new Employee("Piotr", "Nowak", (byte) 36, Sex.MALE, 2800, new String[]{"CSS", "PHP"}));
 
         int operationNumber;
         do {
