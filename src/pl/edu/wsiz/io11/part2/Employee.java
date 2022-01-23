@@ -29,7 +29,6 @@ public abstract class Employee {
         char sexChar = this.sex == Sex.FEMALE ? 'K' : 'M';
         String skillsStr = String.join(", ", skills);
         System.out.printf("%s %s %d %s %dzł [%s]\n", firstname, lastname, age, sexChar, salary, skillsStr);
-//        System.out.println(firstname + " " + lastname + " " + age + " " + sexChar + " " + salary + "zł");
     }
 
     public static void print(Employee employee) {

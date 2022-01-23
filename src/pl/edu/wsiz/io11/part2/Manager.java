@@ -9,4 +9,10 @@ public class Manager extends Employee {
     public static Manager read() {
         return new Manager(readFirstname(), readLastname(), readAge(), readSex(), readSalary(), readSkills());
     }
+
+    @Override
+    public void print() {
+        System.out.print("K ");
+        super.print();
+    }
 }

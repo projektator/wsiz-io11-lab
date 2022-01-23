@@ -11,4 +11,10 @@ public class Developer extends Employee {
     public static Developer read() {
         return new Developer(readFirstname(), readLastname(), readAge(), readSex(), readSalary(), readSkills());
     }
+
+    @Override
+    public void print() {
+        System.out.print("P ");
+        super.print();
+    }
 }
