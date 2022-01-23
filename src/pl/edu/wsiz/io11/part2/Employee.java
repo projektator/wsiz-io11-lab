@@ -1,5 +1,6 @@
 package pl.edu.wsiz.io11.part2;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public abstract class Employee {
@@ -26,14 +27,19 @@ public abstract class Employee {
     }
 
     public void print() {
-        char sexChar = this.sex == Sex.FEMALE ? 'K' : 'M';
-        String skillsStr = String.join(", ", skills);
-
-        System.out.printf("%c %s %s %d %c %dzł [%s]\n", getJobSymbol(), firstname, lastname, age, sexChar, salary, skillsStr);
+        System.out.println(this);
     }
 
     public static void print(Employee employee) {
         employee.print();
+    }
+
+    @Override
+    public String toString() {
+        char sexChar = this.sex == Sex.FEMALE ? 'K' : 'M';
+        String skillsStr = String.join(", ", skills);
+
+        return String.format("%c %s %s %d %c %dzł [%s]", getJobSymbol(), firstname, lastname, age, sexChar, salary, skillsStr);
     }
 
     protected static String readFirstname() {
