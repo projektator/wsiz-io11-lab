@@ -25,5 +25,38 @@ public class Program {
         for (Growable growable : growables) {
             System.out.println("Growable: " + growable);
         }
+
+//        showDemo();
+    }
+
+    public static void showDemo() {
+        int a = 5;
+        Growable tree = new Tree(30);
+
+        System.out.println("a: " + a);
+        System.out.println("tree: " + tree);
+        System.out.println("-------");
+
+        print(a, tree);
+
+        System.out.println("a: " + a);
+        System.out.println("tree: " + tree);
+        System.out.println("-------");
+    }
+
+    public static void print(int aa, Growable growable) {
+        System.out.println("aa: " + aa);
+        System.out.println("growable: " + growable);
+        System.out.println("-------");
+
+        growable.grow();
+
+        growable = DogFactory.getDog();
+
+        aa += 1;
+
+        System.out.println("aa: " + aa);
+        System.out.println("growable: " + growable);
+        System.out.println("-------");
     }
 }
