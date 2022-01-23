@@ -11,8 +11,7 @@ public class Manager extends Employee {
     }
 
     @Override
-    public void print() {
-        System.out.print("K ");
-        super.print();
+    protected char getJobSymbol() {
+        return 'K';
     }
 }

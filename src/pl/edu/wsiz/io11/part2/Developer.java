@@ -13,8 +13,7 @@ public class Developer extends Employee {
     }
 
     @Override
-    public void print() {
-        System.out.print("P ");
-        super.print();
+    protected char getJobSymbol() {
+        return 'P';
     }
 }

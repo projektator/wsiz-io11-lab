@@ -28,7 +28,8 @@ public abstract class Employee {
     public void print() {
         char sexChar = this.sex == Sex.FEMALE ? 'K' : 'M';
         String skillsStr = String.join(", ", skills);
-        System.out.printf("%s %s %d %s %dzł [%s]\n", firstname, lastname, age, sexChar, salary, skillsStr);
+
+        System.out.printf("%c %s %s %d %c %dzł [%s]\n", getJobSymbol(), firstname, lastname, age, sexChar, salary, skillsStr);
     }
 
     public static void print(Employee employee) {
@@ -92,4 +93,6 @@ public abstract class Employee {
 
         return skillsArr;
     }
+
+    protected abstract char getJobSymbol();
 }
