@@ -4,12 +4,11 @@ import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         Company company = new Company();
 
         company.addEmployee(new Developer("Jan", "Kowalski", (byte) 31, Sex.MALE, 3000, new String[]{"HTML"}));
-        company.addEmployee(new Manager("Anna", "Kowalczyk", (byte) 27, Sex.FEMALE, 3200, new String[]{"Java", "CSS"}, 2));
+        company.addEmployee(new Manager("Anna", "Kowalczyk", (byte) 27, Sex.FEMALE, 4000, new String[]{"Java", "CSS"}, 14));
         company.addEmployee(new Developer("Piotr", "Nowak", (byte) 36, Sex.MALE, 2800, new String[]{"CSS", "PHP"}));
 
         int operationNumber;

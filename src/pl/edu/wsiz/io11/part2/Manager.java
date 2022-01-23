@@ -1,9 +1,11 @@
 package pl.edu.wsiz.io11.part2;
 
 import java.util.Scanner;
-import java.util.StringJoiner;
 
 public class Manager extends Employee {
+
+    private static final double BONUS_FACTOR_PER_STEP = 0.05;
+    private static final byte NUMBER_OF_PEOPLE_PER_BONUS_STEP = 5;
 
     private int teamSize;
 
@@ -24,6 +26,11 @@ public class Manager extends Employee {
     @Override
     protected char getJobSymbol() {
         return 'K';
+    }
+
+    @Override
+    protected double getTotalSalary() {
+        return getSalary() * (1 + (teamSize / NUMBER_OF_PEOPLE_PER_BONUS_STEP) * BONUS_FACTOR_PER_STEP);
     }
 
     private static int readTeamSize() {

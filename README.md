@@ -333,7 +333,7 @@ P Jan Kowalski 31 M 2800zł [C#, JS]
 
 #### 2.17
 
-Do klasy `Employee` dodaj abstrakcyjną metodę `getTotalSalary` zwracającą całkowite wynagrodzenie pracownika (`int`).
+Do klasy `Employee` dodaj abstrakcyjną metodę `getTotalSalary` zwracającą całkowite wynagrodzenie pracownika (`double`).
 Zaimplementuj metodę `getTotalSalary` w klasach `Developer` i `Manager` zgodnie z poniższymi wymaganiami:
 
 - całkowite wynagrodzenie programisty powinno uwzględniać bonus za znajomość technologi - 2% (kwoty podstawowej) za
