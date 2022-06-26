@@ -7,7 +7,6 @@ public class Exercise04 {
     /**
 
      4. Wczytaj liczbę, następnie wypisz informację czy podana liczba jest parzysta czy nieparzysta.
-
      Podaj liczbę: 88
      Liczba 88 jest parzysta
 

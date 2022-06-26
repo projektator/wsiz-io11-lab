@@ -143,3 +143,11 @@ Wszystkie pola klasy `Employee` oznacz jako prywatne (`private`).
 W głównym programie, bez wykorzystania metody `read`, utwórz obiekt klasy `Employee` oraz zainicjalizuj jego pola wartościami: `Jan` `Kowalski` `31`.
 
 Wprowadź niezbędne modyfikacje umożliwiające wykonanie powyższego zadania.
+
+#### 2.4
+
+Wszystkie pola klasy `Employee` oznacz jako prywatne (`private`).
+
+W głównym programie, bez wykorzystania metody `read`, utwórz obiekt klasy `Employee` oraz zainicjalizuj jego pola wartościami: `Jan` `Kowalski` `31`.
+
+Wprowadź niezbędne modyfikacje umożliwiające wykonanie powyższego zadania.
