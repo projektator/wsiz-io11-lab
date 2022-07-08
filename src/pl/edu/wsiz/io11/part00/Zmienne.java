@@ -1,6 +1,6 @@
 package pl.edu.wsiz.io11.part00;
 
-public class zmienne {
+public class Zmienne {
     public static void main(String[] args) {
         System.out.println("zmienne.main");
         int zmienna = 5;
